@@ -1,5 +1,5 @@
 import { useState } from "react";
-import fashoraLogo from "../assets/fashora.png";
+import fashoraLogo from "../assets/Fashora.png";
 
 import "./Navbar.css";
 
