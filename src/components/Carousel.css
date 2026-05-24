@@ -1,0 +1,49 @@
+.slide{
+    width:100vw;
+}
+
+.slide img{
+    width:100vw;
+    height:88vh;
+
+    object-fit:cover;
+    object-position:center top;
+
+    display:block;
+}
+
+/* Remove default carousel background */
+
+.carousel .slide{
+    background:none;
+}
+
+/* Hide pagination dots */
+
+.carousel .control-dots{
+    display:none;
+}
+
+/* Hide status text */
+
+.carousel-status{
+    display:none;
+}
+
+/* Remove thumbnail area */
+
+.carousel .thumbs-wrapper{
+    display:none;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+    .slide img{
+        width:100%;
+        height:auto;
+        object-fit:contain;
+    }
+
+}
