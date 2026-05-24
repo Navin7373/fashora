@@ -4,8 +4,14 @@
     box-sizing:border-box;
 }
 
+
+
+/* NAVBAR */
+
 .navbar{
+
     width:100%;
+
     display:flex;
     justify-content:space-between;
     align-items:center;
@@ -16,104 +22,240 @@
 
     position:sticky;
     top:0;
+
     z-index:1000;
 
     backdrop-filter:blur(10px);
 }
 
-/* Logo */
+
+
+/* LEFT SECTION */
+
+.left-section{
+
+    display:flex;
+    align-items:center;
+
+    gap:20px;
+}
+
+
+
+/* LOGO */
 
 .logo-container{
+
     display:flex;
     align-items:center;
 }
 
+
+
 .logo-img{
+
     width:180px;
+
     height:auto;
+
     object-fit:contain;
+
     cursor:pointer;
 }
 
-/* Navigation */
+
+
+/* NAVIGATION */
 
 .nav-links{
+
     display:flex;
+
     gap:35px;
+
     list-style:none;
 }
 
+
+
+/* LINKS */
+
 .nav-links li a{
+
     color:#083344;
+
     text-decoration:none;
+
     font-size:17px;
+
     position:relative;
+
     transition:0.3s;
+
     font-weight:500;
 }
 
-/* Hover underline effect */
+
+
+/* HOVER UNDERLINE */
 
 .nav-links li a::after{
+
     content:"";
+
     position:absolute;
+
     width:0%;
+
     height:2px;
+
     left:0;
+
     bottom:-6px;
+
     background:#083344;
+
     transition:0.3s;
 }
 
+
+
 .nav-links li a:hover::after{
+
     width:100%;
 }
 
-/* Button */
+
+
+/* BUTTON */
 
 .nav-btn{
+
     padding:12px 28px;
+
     border:none;
+
     background:#023047;
+
     color:white;
+
     font-weight:600;
+
     border-radius:5px;
+
     cursor:pointer;
+
     transition:0.3s;
 }
 
+
+
+/* BUTTON HOVER */
+
 .nav-btn:hover{
+
     background:#0f4c5c;
 }
 
-/* Mobile Responsive */
+
+
+/* MENU ICON */
+
+.menu-icon{
+
+    display:none;
+
+    font-size:28px;
+
+    cursor:pointer;
+
+    color:#083344;
+}
+
+
+
+/* MOBILE VIEW */
 
 @media(max-width:768px){
 
     .navbar{
-        padding:20px;
-        flex-direction:column;
-        gap:15px;
+
+        padding:15px 20px;
+
+        flex-direction:row;
     }
 
-    .nav-links{
-        display:grid;
-        grid-template-columns:repeat(3, auto);
-        justify-content:center;
-        gap:10px 18px;
+
+
+    /* SHOW MENU ICON */
+
+    .menu-icon{
+
+        display:block;
     }
 
-    .nav-links li a{
-        font-size:14px;
-    }
+
+
+    /* LOGO SIZE */
 
     .logo-img{
-        width:140px;
+
+        width:130px;
     }
+
+
+
+    /* MOBILE NAV */
+
+    .nav-links{
+
+        position:absolute;
+
+        top:80px;
+
+        left:0;
+
+        width:100%;
+
+        background:#8ecae6;
+
+        flex-direction:column;
+
+        align-items:center;
+
+        gap:25px;
+
+        padding:30px 0;
+
+        transform:translateY(-150%);
+
+        transition:0.4s;
+    }
+
+
+
+    /* ACTIVE MENU */
+
+    .nav-links.active{
+
+        transform:translateY(0);
+    }
+
+
+
+    /* SMALLER LINKS */
+
+    .nav-links li a{
+
+        font-size:16px;
+    }
+
+
+
+    /* HIDE BUTTON */
 
     .nav-btn{
-        padding:10px 22px;
-        font-size:14px;
-    }
 
+        display:none;
+    }
 }

@@ -31,7 +31,7 @@ function Products() {
     {
       id:4,
       image:product4,
-      name:"Premium Fashion",
+      name:"Premium Style",
       price:"₹1999"
     }
   ];
